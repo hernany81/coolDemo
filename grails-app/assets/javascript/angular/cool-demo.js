@@ -16,7 +16,7 @@ window.ngCoolDemo.ng = angular.module('ngCoolDemo', [
         'ngCoolDemo.filters',
         'ngCoolDemo.services',
         'ngAnimate',
-        'mgcrea.ngStrap.typeahead'
+        'ui.bootstrap'
     ])
     .config(['$locationProvider', '$logProvider', '$httpProvider', '$provide', function($locationProvider, $logProvider, $httpProvider, $provide) {
 

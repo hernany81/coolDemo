@@ -5,3 +5,13 @@
 *= require plugins/timeline/timeline.css
 *= require sb-admin.css
 */
+
+.form-horizontal.normal-padding .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.loader {
+    font-size: 20px;
+    color: #1087dd;
+}
