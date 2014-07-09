@@ -48,7 +48,7 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body map" data-ng-show="!map.minimized">
-                            <data-google-map center="map.center" zoom="map.zoom"></data-google-map>
+                            <data-google-map center="map.center" zoom="map.zoom" draggable="true"></data-google-map>
                         </div>
                         <!-- /.panel-body -->
                     </div>
