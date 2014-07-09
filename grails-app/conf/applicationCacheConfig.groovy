@@ -1,0 +1,5 @@
+grails{
+    cache {
+        enabled = false
+    }
+}

@@ -119,3 +119,5 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+grails.openweathermap.api = '5cd3a87b0f6911086538cf9e6dfae84e'
