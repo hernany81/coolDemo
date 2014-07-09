@@ -7,7 +7,7 @@
     </div>
     <!-- /.panel-heading -->
     <div class="panel-body">
-        <div data-ng-show="weatherInfo">
+        <div data-ng-if="weatherInfo">
             <img data-ng-src="http://openweathermap.org/img/w/{{weatherInfo.weather[0].icon}}.png">
             <em>{{weatherInfo.weather[0].description}}</em>
         </div>
