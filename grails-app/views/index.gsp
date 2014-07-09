@@ -33,13 +33,22 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default map">
                         <div class="panel-heading">
                             <i class="fa fa-globe fa-fw"></i> <g:message code="main.map.panel.title"/>
+                            <div class="pull-right toggle-btn" data-ng-show="map.minimized" data-ng-click="map.minimized = false">
+                                <span class="fa fa-toggle-down"></span>
+                            </div>
+                            <div class="pull-right toggle-btn" data-ng-show="!map.minimized" data-ng-click="map.minimized = true">
+                                <span class="fa fa-toggle-up"></span>
+                            </div>
+                            <div class="pull-right" data-ng-show="loadingWeather">
+                                <span class="fa fa-spinner fa-spin loader"></span>
+                            </div>
                         </div>
                         <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            {{weatherInfo}}
+                        <div class="panel-body map" data-ng-show="!map.minimized">
+                            <data-google-map center="map.center" zoom="map.zoom"></data-google-map>
                         </div>
                         <!-- /.panel-body -->
                     </div>

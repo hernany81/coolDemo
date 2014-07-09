@@ -16,7 +16,8 @@ window.ngCoolDemo.ng = angular.module('ngCoolDemo', [
         'ngCoolDemo.filters',
         'ngCoolDemo.services',
         'ngAnimate',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'google-maps'
     ])
     .config(['$locationProvider', '$logProvider', '$httpProvider', '$provide', function($locationProvider, $logProvider, $httpProvider, $provide) {
 

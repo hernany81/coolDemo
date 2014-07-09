@@ -35,6 +35,8 @@
         <!-- /#wrapper -->
 
         <asset:javascript src="main.js"/>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <asset:javascript src="google-maps.js"/>
 
     </body>
 

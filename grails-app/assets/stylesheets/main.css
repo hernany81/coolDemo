@@ -15,3 +15,19 @@
     font-size: 20px;
     color: #1087dd;
 }
+
+.angular-google-map-container {
+    height: 400px;
+}
+
+.panel-body.map {
+    padding: 0;
+}
+
+.toggle-btn {
+    cursor: pointer;
+}
+
+.panel.map .panel-heading .toggle-btn {
+    margin-left: 10px;
+}

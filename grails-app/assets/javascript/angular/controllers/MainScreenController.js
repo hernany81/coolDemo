@@ -5,6 +5,15 @@ angular.module('ngCoolDemo').controller('MainScreenController', [
         $scope.loading = false;
         $scope.loadingWeather = false;
 
+        $scope.map = {
+            center: {
+                latitude: 0,
+                longitude: 0
+            },
+            zoom: 7,
+            minimized: false
+        };
+
         $scope.searchCountry = function(countryName) {
             $log.debug('Searching for: ' + countryName);
 
@@ -26,6 +35,10 @@ angular.module('ngCoolDemo').controller('MainScreenController', [
             $scope.loadingWeather = true;
             WeatherService.get({city: item.capital + ',' + item.name}, function(resp){
                 $scope.weatherInfo = resp;
+
+                $scope.map.center.latitude = resp.coord.lat;
+                $scope.map.center.longitude = resp.coord.lon;
+
                 $scope.loadingWeather = false;
             });
         };
