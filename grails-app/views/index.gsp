@@ -63,6 +63,9 @@
                 <div class="col-lg-4 col-md-4">
                     <g:render template="/common/weatherDetailPanel"/>
                 </div>
+                <div class="col-lg-4 col-md-4">
+                    <g:render template="/common/twitterDetailPanel"/>
+                </div>
             </div>
         </div>
 	</body>

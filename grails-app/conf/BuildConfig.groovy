@@ -44,12 +44,16 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo 'http://twitter4j.org/maven2'
     }
 
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.27'
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
+        runtime 'org.twitter4j:twitter4j-core:4.0.2'
+//        runtime 'org.twitter4j:twitter4j-async:4.0.2'
+//        runtime 'org.twitter4j:twitter4j-stream:4.0.2'
     }
 
     plugins {

@@ -121,3 +121,14 @@ log4j = {
 }
 
 grails.openweathermap.api = '5cd3a87b0f6911086538cf9e6dfae84e'
+grails.yahoo.api = '7TgfArnV34EvDezt7lRmn9T5zqDrhlKtS7ubPwPlIvnYJIRJcMnx8fqT92_Cr3CAT3YsLAJm'
+
+twitter {
+    disableTwitter4jController = true
+    'default' {
+        OAuthConsumerKey = 'kbBBXRVyfmIEyXpcMYv3vbmd4'
+        OAuthConsumerSecret = '81sOHRvzj4Re9QbKOHQWqZL3rIKSbOkM6EPDsNi2TpPWPrE5ax'
+        OAuthAccessToken = '2613984181-UpN7SWugUukcRv0838yEhdy2R9FHdD5zjBjIFkZ'
+        OAuthAccessTokenSecret = 'UO2oLbweoy4pRITpp3XShzbFoM4njhXm4MbEwi7A7lUWz'
+    }
+}

@@ -1,9 +1,10 @@
 angular.module('ngCoolDemo').controller('MainScreenController', [
-            '$scope', '$log', 'CountryService', 'WeatherService',
-    function($scope,   $log,   CountryService,   WeatherService) {
+            '$scope', '$log', 'CountryService', 'WeatherService', 'TwitterService',
+    function($scope,   $log,   CountryService,   WeatherService,   TwitterService) {
 
         $scope.loading = false;
         $scope.loadingWeather = false;
+        $scope.loadingTwitter = false;
 
         $scope.map = {
             center: {
@@ -33,13 +34,22 @@ angular.module('ngCoolDemo').controller('MainScreenController', [
             $scope.country = item;
 
             $scope.loadingWeather = true;
-            WeatherService.get({city: item.capital + ',' + item.name}, function(resp){
+
+            var cityName = item.capital + ',' + item.name;
+
+            WeatherService.get({city: cityName}, function(resp){
                 $scope.weatherInfo = resp;
 
                 $scope.map.center.latitude = resp.coord.lat;
                 $scope.map.center.longitude = resp.coord.lon;
 
                 $scope.loadingWeather = false;
+            });
+
+            $scope.loadingTwitter = true;
+            TwitterService.get({country: item.name, city: item.capital}, function(resp){
+                $scope.twitterInfo = resp;
+                $scope.loadingTwitter = false;
             });
         };
     }
