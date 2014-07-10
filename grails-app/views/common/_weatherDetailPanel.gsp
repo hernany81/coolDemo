@@ -7,12 +7,18 @@
     </div>
     <!-- /.panel-heading -->
     <div class="panel-body">
-        <div data-ng-if="weatherInfo">
-            <img data-ng-src="http://openweathermap.org/img/w/{{weatherInfo.weather[0].icon}}.png">
-            <em>{{weatherInfo.weather[0].description}}</em>
-        </div>
-
         <div class="list-group">
+            <div class="list-group-item">
+                <div class="row">
+                    <div data-ng-if="weatherInfo" class="col-md-6">
+                        <img data-ng-src="http://openweathermap.org/img/w/{{weatherInfo.weather[0].icon}}.png">
+                        <em>{{weatherInfo.weather[0].description}}</em>
+                    </div>
+                    <div class="col-md-offset-6 col-md-6">
+                        <select class="form-control" data-ng-model="selectedMetric" data-ng-options="item.label for item in metricsOpt"></select>
+                    </div>
+                </div>
+            </div>
             <a href="#" class="list-group-item">
                 <g:message code="weather.details.wind.speed"/>
                 <span class="pull-right text-muted small">
@@ -34,19 +40,19 @@
             <a href="#" class="list-group-item">
                 <g:message code="weather.details.temp"/>
                 <span class="pull-right text-muted small">
-                    <em data-ng-show="weatherInfo">{{weatherInfo.main.temp}} °K</em>
+                    <em data-ng-show="weatherInfo">{{getTemperature(weatherInfo.main.temp)}} {{selectedMetric.unit}}</em>
                 </span>
             </a>
             <a href="#" class="list-group-item">
                 <g:message code="weather.details.min.temp"/>
                 <span class="pull-right text-muted small">
-                    <em data-ng-show="weatherInfo">{{weatherInfo.main.temp_min}} °K</em>
+                    <em data-ng-show="weatherInfo">{{getTemperature(weatherInfo.main.temp_min)}} {{selectedMetric.unit}}</em>
                 </span>
             </a>
             <a href="#" class="list-group-item">
                 <g:message code="weather.details.max.temp"/>
                 <span class="pull-right text-muted small">
-                    <em data-ng-show="weatherInfo">{{weatherInfo.main.temp_max}} °K</em>
+                    <em data-ng-show="weatherInfo">{{getTemperature(weatherInfo.main.temp_max)}} {{selectedMetric.unit}}</em>
                 </span>
             </a>
         </div>

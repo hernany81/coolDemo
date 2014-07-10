@@ -15,6 +15,30 @@ angular.module('ngCoolDemo').controller('MainScreenController', [
             minimized: false
         };
 
+        $scope.metricsOpt = [
+            {
+                label: 'Kelvin',
+                unit: '°K',
+                factor: 0
+            },{
+                label: 'Celsius',
+                unit: '°C',
+                factor: -273.15
+            }
+        ];
+
+        $scope.selectedMetric = $scope.metricsOpt[1];
+
+        $scope.getTemperature = function(value) {
+            var result = value + $scope.selectedMetric.factor;
+
+            if(result.toString().indexOf('.') > 0) {
+                return result.toFixed(2);
+            }
+
+            return result;
+        };
+
         $scope.searchCountry = function(countryName) {
             $log.debug('Searching for: ' + countryName);
 
