@@ -24,5 +24,5 @@ To integrate google maps into the App I used an Angular Google Map directive.
 Server Integration:
 -------------------
 
-For the other services (openweathermap & twitter) there is a need to use API keys, so to avoid exposing these keys to client side I integrated in the server.
+For the other services (openweathermap & twitter) there is a need to use API keys, so to avoid exposing these keys to client side I made the integration on the backend.
 Additionally some logic was needed to retrieve trending tweets as sometimes there is no info for some cities and when this happens I retrieve trending tweets from the country.
