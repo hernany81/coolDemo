@@ -120,6 +120,7 @@ log4j = {
            'net.sf.ehcache.hibernate'
 }
 
+grails.assets.minifyJs = false
 grails.openweathermap.api = '5cd3a87b0f6911086538cf9e6dfae84e'
 grails.yahoo.api = '7TgfArnV34EvDezt7lRmn9T5zqDrhlKtS7ubPwPlIvnYJIRJcMnx8fqT92_Cr3CAT3YsLAJm'
 
