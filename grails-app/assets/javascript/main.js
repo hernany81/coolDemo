@@ -1,9 +1,3 @@
-//= require jquery-1.10.2.js
-//= require bootstrap.min.js
-//= require plugins/metisMenu/jquery.metisMenu.js
-//= require plugins/morris/raphael-2.1.0.min.js
-//= require plugins/morris/morris.js
-//= require sb-admin.js
 //= require angular/angular.js
 //= require angular/angular-sanitize.js
 //= require angular/angular-animate.js
